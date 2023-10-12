@@ -21,6 +21,7 @@ it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
   cy.get('.checkout-button').click()
   cy.get('#terms').check()
   cy.get('#place_order').click()
+  cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
 });
 
 
